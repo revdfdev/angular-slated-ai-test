@@ -1,0 +1,12 @@
+<div class="flex flex-col items-center justify-center h-screen">
+  <h1 class="text-4xl font-bold mb-4">Gender Finder</h1>
+  <form [formGroup]="nameForm" (submit)="onSubmit(nameForm)" class="flex flex-col items-center justify-center space-y-4">
+    <input id="name" class="border border-gray-300 rounded-md py-2 px-4 w-80 text-gray-900" type="text" placeholder="Enter a name" formControlName="name">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Find Gender
+    </button>
+  </form>
+  <div class="mt-4">
+    <h2 *ngIf="gender" class="text-lg font-bold">The gender is {{gender}}</h2>
+  </div>
+</div>
